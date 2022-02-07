@@ -1,0 +1,14 @@
+{
+	"appName": "Archaeology Helper",
+	"description": "minimal alt1 webpack/ts example test app",
+	"appUrl": "./index.html",
+	"configUrl": "./appconfig.json",
+	"iconUrl": "",
+	"defaultWidth": 220,
+	"defaultHeight": 500,
+	"minWidth": 230,
+	"minHeight": 500,
+	"requestHandlers": [ ],
+	"activators": [	],
+	"permissions": "pixel,gamestate,overlay"
+}
