@@ -1,9 +1,8 @@
 //alt1 base libs, provides all the commonly used methods for image matching and capture
 //also gives your editor info about the window.alt1 api
-import * as a1lib from "@alt1/base";
-import {Alt1EventType, mixColor} from "@alt1/base";
+import {mixColor} from "@alt1/base";
 
-import React, {useCallback, useEffect, useRef, useState} from "react"
+import React, {useEffect, useRef, useState} from "react"
 import ReactDOM from "react-dom"
 import ChatBoxReader from "@alt1/chatbox"
 import {
@@ -14,8 +13,8 @@ import {
   displayMessage,
   hide,
   screenshot,
+  sortByLastSite,
   toggleCrosshairs,
-  updateMaterials,
   useLocalStorage
 } from "./helpers"
 import ArchHelperOptions, {materialStorageSort} from "./ArchHelperOptions";
@@ -60,6 +59,7 @@ function App() {
 
   const [mainStates, setMainStates] = useState<any>({
     foundChat: null,
+    materials: [],
     scanning: {
       trigger: false,
       state: MaterialStorageReadState.IDLE
@@ -78,30 +78,6 @@ function App() {
 
   const {showHud, scanning, foundChat, crosshairs} = mainStates;
 
-  const alt1KeyHandler = useCallback((ev: Alt1EventType["alt1pressed"]) => {
-    switch (ev.keyData.keyCode) {
-      case 20:
-        setMainStates((ms) => ({...ms, crosshairs: {trigger: true, visible: !crosshairs.visible}}));
-        break;
-      case 21:
-        setMainStates((ms) => ({...ms, showHud: {trigger: true, visible: !showHud.visible}}));
-        break;
-      case 22:
-        screenshot();
-        break;
-      default:
-        break;
-    }
-  }, [mainStates])
-
-  useEffect(() => {
-    a1lib.on("alt1pressed", alt1KeyHandler);
-    return () => {
-      a1lib.removeListener("alt1pressed", alt1KeyHandler);
-    }
-  }, [alt1KeyHandler]);
-
-
   const resetMats = () => {
     const archHelperOptions = createArchHelperOptions();
     setOptions(archHelperOptions);
@@ -112,24 +88,22 @@ function App() {
   useEffect(() => {
     if (crosshairs.trigger) {
       toggleCrosshairs(crosshairs.visible);
-      setMainStates((ms) => ({...ms, crosshairs: {trigger: false, visible: crosshairs.visible}}))
+      setMainStates((ms) => ({...ms, crosshairs: {...ms.crosshairs, trigger: false}}))
     }
   }, [mainStates]);
 
   useEffect(() => {
     if (showHud.trigger) {
       if (showHud.visible) {
+        console.log("displayMaterials");
         displayMaterials(options.shapedData(), 'arch_hud', 5);
       } else {
         hide('arch_hud');
       }
-      setMainStates((ms) => ({...ms, showHud: {trigger: false, visible: showHud.visible}}))
+      setMainStates((ms) => ({...ms, showHud: {...ms.showHud, trigger: false}}));
     }
-  }, [mainStates, options]);
+  }, [showHud, options]);
 
-  useEffect(() => {
-    updateMaterials('arch_hud', options.materialsData);
-  }, [options])
 
   useEffect(() => {
     const tick = () => {
@@ -138,7 +112,6 @@ function App() {
           if (matsReaderRef.current.currentReadState === MaterialStorageReadState.IDLE) {
             matsReaderRef.current.start()
           } else {
-
             const readState: ReadState = matsReaderRef.current.read();
             let running = matsReaderRef.current.running();
             if (running) {
@@ -161,7 +134,7 @@ function App() {
               const new_options = new ArchHelperOptions(readState.materials, materialStorageSort, "NONE");
               setOptions(new_options);
               displayMessage(readState.detail, "arch_scan", 5000, 20);
-              setMainStates((ms) => ({...ms, scanning: {trigger: false, state: readState.state}}));
+              setMainStates((ms) => ({...ms, showHud:{trigger: true, visible:true}, scanning: {trigger: false, state: readState.state}}));
             }
           }
         }
@@ -170,7 +143,7 @@ function App() {
         displayMessage("An error has occured: " + error, "error", 3000, 20, mixColor(255, 32, 32));
       }
     };
-    const tickInterval = setInterval(tick, 1000)
+    const tickInterval = setInterval(tick, 500)
 
     return () => clearInterval(tickInterval)
   }, [mainStates]);
@@ -219,11 +192,13 @@ function App() {
             let found = detectChatArch(line, options.materialsData);
             if (found.changes) {
               console.log("Found:", found);
-              const new_options = new ArchHelperOptions(options.materialsData);
-              setOptions(new_options)
+              const new_options = new ArchHelperOptions(options.materialsData, options.sortOptions, options.filterOptions, options.filterOptionsArgs);
+              setOptions(new_options);
+              setMainStates((ms) => ({...ms, showHud: {trigger:true, visible: true}}));
             } else if (found.command.type !== null) {
               const new_options = new ArchHelperOptions(options.materialsData, found.command.args.sort, found.command.args.filter, found.command.args.filterArgs);
               setOptions(new_options);
+              setMainStates((ms) => ({...ms, showHud: {trigger:true, visible: true}}));
               console.log("Detected possible sort/filter: ", found.command);
             }
           });
@@ -237,7 +212,7 @@ function App() {
     const tickInterval = setInterval(tick, 1000)
 
     return () => clearInterval(tickInterval)
-  }, [])
+  }, [mainStates, options])
 
   return (
     <div
@@ -282,6 +257,12 @@ function App() {
               <button className={"nisbutton2"} onClick={() => screenshot()} type="button">
                 Screenshot
               </button>
+              <button className={"nisbutton2"} onClick={() => setMainStates((ms) => ({...ms, crosshairs: {trigger: true, visible: !crosshairs.visible}}))} type="button">
+                Toggle Crosshairs
+              </button>
+              <button className={"nisbutton2"} onClick={() => setMainStates((ms) => ({...ms, showHud: {trigger: true, visible: !showHud.visible}}))} type="button">
+                Toggle HUD
+              </button>
               <button className={"nisbutton2"} data-toggle={"collapse"} data-target={"#filtersort"} role={"button"}>
                 Filters/Sorts
               </button>
@@ -291,7 +272,15 @@ function App() {
                   setOptions(new_options)
                   setMainStates((ms) => ({...ms, showHud: {trigger: true, visible: false}}));
                 }}>
-                  Reset
+                  No Filter
+                </button>
+                <button className="nisbutton" onClick={() => {
+                  let found = {command: sortByLastSite()}
+                  const new_options = new ArchHelperOptions(options.materialsData, found.command.args.sort, found.command.args.filter, found.command.args.filterArgs);
+                  setOptions(new_options);
+                  setMainStates((ms) => ({...ms, showHud: {trigger: true, visible: false}}));
+                }}>
+                  Last Site
                 </button>
                 <button className="nisbutton" onClick={() => {
                   const new_options = new ArchHelperOptions(options.materialsData, materialStorageSort, "RECENT_10_MIN");

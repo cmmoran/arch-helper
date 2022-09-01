@@ -1,4 +1,4 @@
-import {Material, materials} from "./helpers";
+import {Material, materials} from "./data";
 
 export type SortOptions = {
   keys: string[],
@@ -49,14 +49,14 @@ export const MaterialFilterOptionsMap: {[k:string]: Filterer} = {
 };
 
 export const materialStorageSort: SortOptions = {
-  keys: ['faction', 'id'],
+  keys: ['faction', 'level'],
   desc: false
 }
 
 export default class ArchHelperOptions {
-  private readonly _materialsData: Material[] = materials;
-  private readonly _sortOptions: SortOptions = materialStorageSort;
-  private readonly _filterOptions: FilterOptions = "NONE";
+  private readonly _materialsData: Material[];
+  private readonly _sortOptions: SortOptions;
+  private readonly _filterOptions: FilterOptions;
   private readonly _filterOptionsArgs: any[];
 
   constructor(
@@ -81,6 +81,10 @@ export default class ArchHelperOptions {
 
   get filterOptions(): FilterOptions {
     return this._filterOptions;
+  }
+
+  get filterOptionsArgs(): any[] {
+    return this._filterOptionsArgs;
   }
 
   public shapedData(): Material[] {

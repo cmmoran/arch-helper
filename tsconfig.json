@@ -6,8 +6,5 @@
     "outDir": "./dist",
     "allowJs": true,
     "target": "es6"
-  },
-  "include": [
-    "./src/**/*"
-  ]
+  }
 }

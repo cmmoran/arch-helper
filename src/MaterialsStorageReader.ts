@@ -1,9 +1,11 @@
-import * as ocr from "@alt1/ocr";
+import * as OCR from "@alt1/ocr";
 import {ColortTriplet} from "@alt1/ocr";
 import * as a1lib from "@alt1/base";
 import {ImageData, ImgRef} from "@alt1/base";
 import font from "@alt1/ocr/fonts/pixel_digits_8px_shadow";
-import {abuseLocalStorage, enumKeys, Material, materials, sortMats} from "./helpers";
+import {abuseLocalStorage, sortMats} from "./helpers";
+import {Material, materials} from "./data";
+import {ModalUI, ModalUIReader} from "./detect/modaluireader";
 
 const defaultcolors: ColortTriplet[] = [
   [80, 90, 16], // 0
@@ -16,6 +18,7 @@ const defaultcolors: ColortTriplet[] = [
   [0, 255, 0] // green
 ];
 
+/*
 const matNames = [
   'third_age_iron',//
   'samite_silk',
@@ -60,7 +63,7 @@ const matNames = [
 ];
 
 const imgs = a1lib.ImageDetect.webpackImages({
-  material_storage: require("./detect/material_storage.data.png"),
+  // material_storage: require("./detect/material_storage.data.png"),
   third_age_iron: require("./detect/third_age_iron.data.png"),
   third_age_iron_disabled: require("./detect/third_age_iron_disabled.data.png"),
   // stormguard_steel: require("./images/stormguard_steel.data.png"),
@@ -120,6 +123,7 @@ const imgs = a1lib.ImageDetect.webpackImages({
 const cleanName = (name) => {
   return name?.replace("'", "")?.replace(/\s+/g, "_")?.toLowerCase();
 }
+*/
 
 const [backup, setBackup] = abuseLocalStorage('arch_helper_options_backup', materials)
 
@@ -131,6 +135,7 @@ export enum MaterialStorageReadState {
   IDLE,
 }
 
+/*
 export const nextMaterialStorageReadState = (currentState: MaterialStorageReadState): MaterialStorageReadState => {
   if (currentState.valueOf() === MaterialStorageReadState.IDLE.valueOf()) {
     return MaterialStorageReadState.IDLE;
@@ -138,6 +143,7 @@ export const nextMaterialStorageReadState = (currentState: MaterialStorageReadSt
   let next: string = enumKeys(MaterialStorageReadState).find((k, v) => +v === currentState.valueOf() + 1);
   return MaterialStorageReadState[next];
 }
+*/
 
 export type ReadState = {
   state: MaterialStorageReadState,
@@ -154,7 +160,7 @@ export default class MaterialsStorageReader {
 
   constructor(mats: Material[] = materials,
   ) {
-    this._materialsData = sortMats(mats, ['faction', 'id']);
+    this._materialsData = sortMats(mats, ['faction', 'level']);
 
   }
 
@@ -165,7 +171,7 @@ export default class MaterialsStorageReader {
   }
 
   set materialsData(value: Material[]) {
-    this._materialsData = sortMats(value, ['faction', 'id']);
+    this._materialsData = sortMats(value, ['faction', 'level']);
   }
 
   get materialsData(): Material[] {
@@ -212,7 +218,7 @@ export default class MaterialsStorageReader {
         materials: this._materialsData
       };
     }
-    let detail = "Material Storage quantities captured.", status = true;
+    let detail: string, status = true;
     if (this.stageOneComplete && this.stageTwoComplete) {
       this._currentReadState = MaterialStorageReadState.FINISHED;
     } else {
@@ -252,14 +258,66 @@ export default class MaterialsStorageReader {
   }
 
   private findMaterialsQuantities(img: ImgRef) {
-    if(!this.stageOneComplete) {
-      this.findMaterialsQuantitiesRows(img, this._materialsData, true);
+    const modals = ModalUIReader.find(img);
+    if(modals.length === 0) {
+      return;
     }
-    if(!this.stageTwoComplete) {
-      this.findMaterialsQuantitiesRows(img, this._materialsData, false);
+    let pos = modals[0];
+
+    let buf:ImageData = pos.img.toData(pos.rect.x, pos.rect.y, pos.rect.width, pos.rect.height);
+    switch(pos.scrollPosition) {
+      case "top":
+        return this.readTop(buf, this._materialsData);
+      case "bot":
+        return this.readBot(buf, this._materialsData);
     }
   }
 
+  private readTop(buf:ImageData, mats) {
+    const rowLen = (r) => (r === 0 ? 10 : 5);
+    const dx = (i) => 22 + (i * 45);
+    const dy = (r) => 50 + (r * 70);
+    let read_any: boolean = false;
+    let index = 0;
+    for (let r = 0; r < 4; r++) {
+      for (let i = 0; i < rowLen(r); i++) {
+        const line = OCR.readLine(buf, font, defaultcolors, dx(i), dy(r), true, true);
+        if (line.text !== '') {
+          read_any = true;
+        }
+        mats[index].last = Date.now();
+        mats[index++].qty = +line.text;      }
+    }
+    if(read_any && !this.stageOneComplete) {
+      this.stageOneComplete = true;
+      this._currentReadState = this.stageTwoComplete ? MaterialStorageReadState.FINISHED : MaterialStorageReadState.READ_STAGE_TWO;
+    }
+    console.log("MATS:", this._materialsData);
+  }
+
+  private readBot(buf:ImageData, mats) {
+    const dx = (i) => 22 + (i * 45);
+    const dy = (r) => 134 + (r * 70);
+    let read_any: boolean = false;
+    let index = 25;
+    for (let r = 0; r < 3; r++) {
+      for (let i = 0; i < 5; i++) {
+        const line = OCR.readLine(buf, font, defaultcolors, dx(i), dy(r), true, true);
+        if (line.text !== '') {
+          read_any = true;
+        }
+        mats[index].last = Date.now();
+        mats[index++].qty = +line.text;
+      }
+    }
+    if(read_any && !this.stageTwoComplete) {
+      this.stageTwoComplete = true;
+      this._currentReadState = this.stageOneComplete ? MaterialStorageReadState.FINISHED : MaterialStorageReadState.READ_STAGE_ONE;
+    }
+    console.log("MATS:", this._materialsData);
+  }
+
+/*
   private findMaterialsQuantitiesRows(img: ImgRef, mats, forward: boolean) {
     const from = forward ? 'third_age_iron' : 'zarosian_insignia';
     const fromImg = imgs[from];
@@ -326,4 +384,5 @@ export default class MaterialsStorageReader {
     }
     return {loc: needle, empty};
   };
+  */
 }

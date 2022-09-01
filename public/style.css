@@ -76,7 +76,8 @@ body.nis:not(.artefact) {
 }
 
 .getMat {
-    background-color: #00eeff !important;
+    background-color: rgb(127, 169, 255) !important;
+    /*background-color: #00eeff !important;*/
     transition: background-color 500ms;
 }
 
