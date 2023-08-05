@@ -550,10 +550,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 16,
       },
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 12,
       },
     ],
@@ -566,10 +568,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 12,
       },
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 16,
       },
     ],
@@ -582,10 +586,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 6,
       },
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 2,
       },
     ],
@@ -598,14 +604,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 10,
       },
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 6,
       },
       {
         name: "Imperial steel",
+        key: "imperial_steel",
         qty: 12,
       },
     ],
@@ -618,14 +627,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 8,
       },
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 8,
       },
       {
         name: "Imperial steel",
+        key: "imperial_steel",
         qty: 12,
       },
     ],
@@ -638,10 +650,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 16,
       },
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 12,
       },
     ],
@@ -654,14 +668,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 8,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 10,
       },
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 12,
       },
     ],
@@ -674,10 +691,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 16,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 14,
       },
     ],
@@ -690,14 +709,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 10,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 12,
       },
       {
         name: "Orthenglass",
+        key: "orthenglass",
         qty: 8,
       },
     ],
@@ -710,10 +732,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 14,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 16,
       },
     ],
@@ -726,10 +750,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 14,
       },
       {
         name: "Orthenglass",
+        key: "orthenglass",
         qty: 18,
       },
     ],
@@ -747,18 +773,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 6,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 6,
       },
       {
         name: "Vellum",
+        key: "vellum",
         qty: 6,
       },
       {
         name: "Cadmium red",
+        key: "cadmium_red",
         qty: 14,
       },
     ],
@@ -775,14 +805,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 8,
       },
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 14,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 10,
       },
     ],
@@ -800,14 +833,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 8,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 10,
       },
       {
         name: "Tyrian purple",
+        key: "tyrian_purple",
         qty: 14,
       },
     ],
@@ -824,14 +860,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 10,
       },
       {
         name: "Chaotic brimstone",
+        key: "chaotic_brimstone",
         qty: 10,
       },
       {
         name: "Demonhide",
+        key: "demonhide",
         qty: 12,
       },
     ],
@@ -844,18 +883,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 6,
       },
       {
         name: "Chaotic brimstone",
+        key: "chaotic_brimstone",
         qty: 8,
       },
       {
         name: "Demonhide",
+        key: "demonhide",
         qty: 12,
       },
       {
         name: "Cadmium red",
+        key: "cadmium_red",
         qty: 6,
       },
     ],
@@ -868,18 +911,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 6,
       },
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 6,
       },
       {
         name: "Chaotic brimstone",
+        key: "chaotic_brimstone",
         qty: 8,
       },
       {
         name: "Demonhide",
+        key: "demonhide",
         qty: 12,
       },
     ],
@@ -892,14 +939,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 16,
       },
       {
         name: "Cadmium red",
+        key: "cadmium_red",
         qty: 10,
       },
       {
         name: "Eye of Dagon",
+        key: "eye_of_dagon",
         qty: 14,
       },
     ],
@@ -912,10 +962,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 16,
       },
       {
         name: "Hellfire metal",
+        key: "hellfire_metal",
         qty: 24,
       },
     ],
@@ -928,10 +980,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 20,
       },
       {
         name: "White marble",
+        key: "white_marble",
         qty: 24,
       },
     ],
@@ -944,10 +998,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 20,
       },
       {
         name: "Keramos",
+        key: "keramos",
         qty: 24,
       },
     ],
@@ -960,14 +1016,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 14,
       },
       {
         name: "Eye of Dagon",
+        key: "eye_of_dagon",
         qty: 12,
       },
       {
         name: "Hellfire metal",
+        key: "hellfire_metal",
         qty: 20,
       },
     ],
@@ -980,14 +1039,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 14,
       },
       {
         name: "Chaotic brimstone",
+        key: "chaotic_brimstone",
         qty: 18,
       },
       {
         name: "Eye of Dagon",
+        key: "eye_of_dagon",
         qty: 14,
       },
     ],
@@ -1000,14 +1062,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 12,
       },
       {
         name: "Imperial steel",
+        key: "imperial_steel",
         qty: 16,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 18,
       },
     ],
@@ -1025,14 +1090,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 16,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 18,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 12,
       },
     ],
@@ -1045,10 +1113,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Keramos",
+        key: "keramos",
         qty: 26,
       },
       {
         name: "Cobalt blue",
+        key: "cobalt_blue",
         qty: 20,
       },
     ],
@@ -1061,10 +1131,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 24,
       },
       {
         name: "Cobalt blue",
+        key: "cobalt_blue",
         qty: 22,
       },
     ],
@@ -1077,26 +1149,31 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Malachite green",
+        key: "malachite_green",
         qty: 30,
       },
       {
         name: "Cadmium red",
+        key: "cadmium_red",
         qty: 30,
       },
       {
         name: "Cobalt blue",
+        key: "cobalt_blue",
         qty: 30,
       },
       {
         name: "Armadylean yellow",
+        key: "armadylean_yellow",
         qty: 30,
       },
       {
         name: "Tyrian purple",
+        key: "tyrian_purple",
         qty: 30,
       },
     ],
-    collections: ["Other"],
+    collections: ["Tetracompass"],
   },
   {
     name: "Everlight harp",
@@ -1105,10 +1182,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Everlight silvthril",
+        key: "everlight_silvthril",
         qty: 30,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 22,
       },
     ],
@@ -1125,10 +1204,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Everlight silvthril",
+        key: "everlight_silvthril",
         qty: 28,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 24,
       },
     ],
@@ -1146,14 +1227,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Star of Saradomin",
+        key: "star_of_saradomin",
         qty: 16,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 20,
       },
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 16,
       },
     ],
@@ -1170,10 +1254,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "White marble",
+        key: "white_marble",
         qty: 30,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 24,
       },
     ],
@@ -1186,10 +1272,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "White marble",
+        key: "white_marble",
         qty: 30,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 24,
       },
     ],
@@ -1202,14 +1290,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 16,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 18,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 22,
       },
     ],
@@ -1222,14 +1313,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Vellum",
+        key: "vellum",
         qty: 20,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 18,
       },
       {
         name: "Blood of Orcus",
+        key: "blood_of_orcus",
         qty: 18,
       },
     ],
@@ -1247,14 +1341,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 28,
       },
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 12,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 20,
       },
     ],
@@ -1267,18 +1364,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Imperial steel",
+        key: "imperial_steel",
         qty: 16,
       },
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 12,
       },
       {
         name: "Soapstone",
+        key: "soapstone",
         qty: 20,
       },
       {
         name: "Blood of Orcus",
+        key: "blood_of_orcus",
         qty: 12,
       },
     ],
@@ -1291,14 +1392,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Soapstone",
+        key: "soapstone",
         qty: 26,
       },
       {
         name: "Tyrian purple",
+        key: "tyrian_purple",
         qty: 14,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 20,
       },
     ],
@@ -1311,10 +1415,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Keramos",
+        key: "keramos",
         qty: 34,
       },
       {
         name: "Star of Saradomin",
+        key: "star_of_saradomin",
         qty: 28,
       },
     ],
@@ -1327,10 +1433,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Keramos",
+        key: "keramos",
         qty: 32,
       },
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 30,
       },
     ],
@@ -1343,10 +1451,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Star of Saradomin",
+        key: "star_of_saradomin",
         qty: 34,
       },
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 28,
       },
     ],
@@ -1359,18 +1469,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 26,
       },
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 12,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 12,
       },
       {
         name: "Tyrian purple",
+        key: "tyrian_purple",
         qty: 12,
       },
     ],
@@ -1383,14 +1497,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Soapstone",
+        key: "soapstone",
         qty: 28,
       },
       {
         name: "Tyrian purple",
+        key: "tyrian_purple",
         qty: 14,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 20,
       },
     ],
@@ -1403,18 +1520,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Blood of Orcus",
+        key: "blood_of_orcus",
         qty: 12,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 18,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 14,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 18,
       },
     ],
@@ -1427,14 +1548,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Tyrian purple",
+        key: "tyrian_purple",
         qty: 16,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 18,
       },
       {
         name: "Soapstone",
+        key: "soapstone",
         qty: 28,
       },
     ],
@@ -1447,14 +1571,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Soapstone",
+        key: "soapstone",
         qty: 28,
       },
       {
         name: "Tyrian purple",
+        key: "tyrian_purple",
         qty: 14,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 20,
       },
     ],
@@ -1467,14 +1594,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "White oak",
+        key: "white_oak",
         qty: 28,
       },
       {
         name: "Blood of Orcus",
+        key: "blood_of_orcus",
         qty: 16,
       },
       {
         name: "Imperial steel",
+        key: "imperial_steel",
         qty: 18,
       },
     ],
@@ -1487,14 +1617,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 14,
       },
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 30,
       },
       {
         name: "Tyrian purple",
+        key: "tyrian_purple",
         qty: 18,
       },
     ],
@@ -1507,18 +1640,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 14,
       },
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 12,
       },
       {
         name: "Blood of Orcus",
+        key: "blood_of_orcus",
         qty: 14,
       },
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 22,
       },
     ],
@@ -1531,18 +1668,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Tyrian purple",
+        key: "tyrian_purple",
         qty: 14,
       },
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 20,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 14,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 14,
       },
     ],
@@ -1555,18 +1696,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 10,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 10,
       },
       {
         name: "Vellum",
+        key: "vellum",
         qty: 10,
       },
       {
         name: "Cadmium red",
+        key: "cadmium_red",
         qty: 34,
       },
     ],
@@ -1583,14 +1728,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 16,
       },
       {
         name: "Eye of Dagon",
+        key: "eye_of_dagon",
         qty: 24,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 24,
       },
     ],
@@ -1603,14 +1751,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Soapstone",
+        key: "soapstone",
         qty: 30,
       },
       {
         name: "Tyrian purple",
+        key: "tyrian_purple",
         qty: 14,
       },
       {
         name: "Blood of Orcus",
+        key: "blood_of_orcus",
         qty: 20,
       },
     ],
@@ -1623,14 +1774,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Imperial steel",
+        key: "imperial_steel",
         qty: 30,
       },
       {
         name: "Blood of Orcus",
+        key: "blood_of_orcus",
         qty: 16,
       },
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 18,
       },
     ],
@@ -1643,14 +1797,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Imperial steel",
+        key: "imperial_steel",
         qty: 30,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 18,
       },
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 16,
       },
     ],
@@ -1663,18 +1820,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Vellum",
+        key: "vellum",
         qty: 16,
       },
       {
         name: "Tyrian purple",
+        key: "tyrian_purple",
         qty: 24,
       },
       {
         name: "Blood of Orcus",
+        key: "blood_of_orcus",
         qty: 12,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 12,
       },
     ],
@@ -1687,14 +1848,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Soapstone",
+        key: "soapstone",
         qty: 30,
       },
       {
         name: "Tyrian purple",
+        key: "tyrian_purple",
         qty: 14,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 20,
       },
     ],
@@ -1707,18 +1871,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Vellum",
+        key: "vellum",
         qty: 12,
       },
       {
         name: "Imperial steel",
+        key: "imperial_steel",
         qty: 18,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 20,
       },
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 14,
       },
     ],
@@ -1731,10 +1899,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Chaotic brimstone",
+        key: "chaotic_brimstone",
         qty: 28,
       },
       {
         name: "Hellfire metal",
+        key: "hellfire_metal",
         qty: 36,
       },
     ],
@@ -1747,14 +1917,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 24,
       },
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 24,
       },
       {
         name: "Chaotic brimstone",
+        key: "chaotic_brimstone",
         qty: 16,
       },
     ],
@@ -1767,10 +1940,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Everlight silvthril",
+        key: "everlight_silvthril",
         qty: 36,
       },
       {
         name: "Star of Saradomin",
+        key: "star_of_saradomin",
         qty: 26,
       },
     ],
@@ -1787,10 +1962,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Everlight silvthril",
+        key: "everlight_silvthril",
         qty: 36,
       },
       {
         name: "Star of Saradomin",
+        key: "star_of_saradomin",
         qty: 26,
       },
     ],
@@ -1807,18 +1984,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 12,
       },
       {
         name: "Orthenglass",
+        key: "orthenglass",
         qty: 12,
       },
       {
         name: "Everlight silvthril",
+        key: "everlight_silvthril",
         qty: 20,
       },
       {
         name: "Star of Saradomin",
+        key: "star_of_saradomin",
         qty: 18,
       },
     ],
@@ -1831,10 +2012,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 36,
       },
       {
         name: "Wings of War",
+        key: "wings_of_war",
         qty: 30,
       },
     ],
@@ -1851,10 +2034,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Stormguard steel",
+        key: "stormguard_steel",
         qty: 36,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 30,
       },
     ],
@@ -1867,10 +2052,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 36,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 30,
       },
     ],
@@ -1883,6 +2070,7 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Orthenglass",
+        key: "orthenglass",
         qty: 66,
       },
     ],
@@ -1895,10 +2083,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "White marble",
+        key: "white_marble",
         qty: 36,
       },
       {
         name: "Cobalt blue",
+        key: "cobalt_blue",
         qty: 30,
       },
     ],
@@ -1911,10 +2101,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Keramos",
+        key: "keramos",
         qty: 36,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 30,
       },
     ],
@@ -1927,10 +2119,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Everlight silvthril",
+        key: "everlight_silvthril",
         qty: 30,
       },
       {
         name: "Orthenglass",
+        key: "orthenglass",
         qty: 36,
       },
     ],
@@ -1943,14 +2137,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Imperial steel",
+        key: "imperial_steel",
         qty: 20,
       },
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 20,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 28,
       },
     ],
@@ -1963,14 +2160,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "White oak",
+        key: "white_oak",
         qty: 10,
       },
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 10,
       },
       {
         name: "Tyrian purple",
+        key: "tyrian_purple",
         qty: 50,
       },
     ],
@@ -1987,14 +2187,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 24,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 16,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 28,
       },
     ],
@@ -2007,10 +2210,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Stormguard steel",
+        key: "stormguard_steel",
         qty: 36,
       },
       {
         name: "Armadylean yellow",
+        key: "armadylean_yellow",
         qty: 32,
       },
     ],
@@ -2027,18 +2232,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Wings of War",
+        key: "wings_of_war",
         qty: 16,
       },
       {
         name: "Animal furs",
+        key: "animal_furs",
         qty: 16,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 20,
       },
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 16,
       },
     ],
@@ -2055,10 +2264,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Armadylean yellow",
+        key: "armadylean_yellow",
         qty: 36,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 32,
       },
     ],
@@ -2075,14 +2286,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Vulcanised rubber",
+        key: "vulcanised_rubber",
         qty: 24,
       },
       {
         name: "Malachite green",
+        key: "malachite_green",
         qty: 20,
       },
       {
         name: "Vellum",
+        key: "vellum",
         qty: 24,
       },
     ],
@@ -2099,10 +2313,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Vulcanised rubber",
+        key: "vulcanised_rubber",
         qty: 36,
       },
       {
         name: "Mark of the Kyzaj",
+        key: "mark_of_the kyzaj",
         qty: 32,
       },
     ],
@@ -2115,14 +2331,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Warforged bronze",
+        key: "warforged_bronze",
         qty: 20,
       },
       {
         name: "Vulcanised rubber",
+        key: "vulcanised_rubber",
         qty: 22,
       },
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 26,
       },
     ],
@@ -2135,14 +2354,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Armadylean yellow",
+        key: "armadylean_yellow",
         qty: 20,
       },
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 30,
       },
       {
         name: "Animal furs",
+        key: "animal_furs",
         qty: 22,
       },
     ],
@@ -2155,10 +2377,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Armadylean yellow",
+        key: "armadylean_yellow",
         qty: 38,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 34,
       },
     ],
@@ -2171,14 +2395,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Armadylean yellow",
+        key: "armadylean_yellow",
         qty: 22,
       },
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 30,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 20,
       },
     ],
@@ -2191,14 +2418,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Warforged bronze",
+        key: "warforged_bronze",
         qty: 28,
       },
       {
         name: "Mark of the Kyzaj",
+        key: "mark_of_the kyzaj",
         qty: 20,
       },
       {
         name: "Fossilised bone",
+        key: "fossilised_bone",
         qty: 24,
       },
     ],
@@ -2211,10 +2441,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Warforged bronze",
+        key: "warforged_bronze",
         qty: 36,
       },
       {
         name: "Fossilised bone",
+        key: "fossilised_bone",
         qty: 36,
       },
     ],
@@ -2227,14 +2459,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Cadmium red",
+        key: "cadmium_red",
         qty: 18,
       },
       {
         name: "Animal furs",
+        key: "animal_furs",
         qty: 28,
       },
       {
         name: "Orthenglass",
+        key: "orthenglass",
         qty: 26,
       },
     ],
@@ -2247,14 +2482,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Cadmium red",
+        key: "cadmium_red",
         qty: 18,
       },
       {
         name: "Animal furs",
+        key: "animal_furs",
         qty: 28,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 26,
       },
     ],
@@ -2267,14 +2505,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Chaotic brimstone",
+        key: "chaotic_brimstone",
         qty: 26,
       },
       {
         name: "Cadmium red",
+        key: "cadmium_red",
         qty: 18,
       },
       {
         name: "Animal furs",
+        key: "animal_furs",
         qty: 28,
       },
     ],
@@ -2287,14 +2528,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 20,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 20,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 32,
       },
     ],
@@ -2307,14 +2551,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Imperial steel",
+        key: "imperial_steel",
         qty: 20,
       },
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 20,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 32,
       },
     ],
@@ -2327,14 +2574,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 32,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 20,
       },
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 20,
       },
     ],
@@ -2347,18 +2597,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Mark of the Kyzaj",
+        key: "mark_of_the kyzaj",
         qty: 16,
       },
       {
         name: "Malachite green",
+        key: "malachite_green",
         qty: 22,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 16,
       },
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 20,
       },
     ],
@@ -2371,10 +2625,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Yu'biusk clay",
+        key: "yubiusk_clay",
         qty: 38,
       },
       {
         name: "Vulcanised rubber",
+        key: "vulcanised_rubber",
         qty: 36,
       },
     ],
@@ -2387,14 +2643,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Everlight silvthril",
+        key: "everlight_silvthril",
         qty: 30,
       },
       {
         name: "Keramos",
+        key: "keramos",
         qty: 22,
       },
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 22,
       },
     ],
@@ -2407,14 +2666,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Star of Saradomin",
+        key: "star_of_saradomin",
         qty: 22,
       },
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 30,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 22,
       },
     ],
@@ -2431,10 +2693,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Stormguard steel",
+        key: "stormguard_steel",
         qty: 40,
       },
       {
         name: "Orthenglass",
+        key: "orthenglass",
         qty: 34,
       },
     ],
@@ -2447,10 +2711,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Aetherium alloy",
+        key: "aetherium_alloy",
         qty: 40,
       },
       {
         name: "Wings of War",
+        key: "wings_of_war",
         qty: 34,
       },
     ],
@@ -2463,14 +2729,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Imperial steel",
+        key: "imperial_steel",
         qty: 20,
       },
       {
         name: "Blood of Orcus",
+        key: "blood_of_orcus",
         qty: 26,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 30,
       },
     ],
@@ -2488,10 +2757,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Vellum",
+        key: "vellum",
         qty: 40,
       },
       {
         name: "Blood of Orcus",
+        key: "blood_of_orcus",
         qty: 36,
       },
     ],
@@ -2509,14 +2780,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Mark of the Kyzaj",
+        key: "mark_of_the kyzaj",
         qty: 26,
       },
       {
         name: "Malachite green",
+        key: "malachite_green",
         qty: 24,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 28,
       },
     ],
@@ -2533,14 +2807,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Mark of the Kyzaj",
+        key: "mark_of_the kyzaj",
         qty: 26,
       },
       {
         name: "Malachite green",
+        key: "malachite_green",
         qty: 24,
       },
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 28,
       },
     ],
@@ -2558,14 +2835,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Mark of the Kyzaj",
+        key: "mark_of_the kyzaj",
         qty: 26,
       },
       {
         name: "Malachite green",
+        key: "malachite_green",
         qty: 24,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 28,
       },
     ],
@@ -2582,18 +2862,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "White oak",
+        key: "white_oak",
         qty: 12,
       },
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 12,
       },
       {
         name: "Vellum",
+        key: "vellum",
         qty: 12,
       },
       {
         name: "Cadmium red",
+        key: "cadmium_red",
         qty: 42,
       },
     ],
@@ -2610,14 +2894,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Eye of Dagon",
+        key: "eye_of_dagon",
         qty: 20,
       },
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 20,
       },
       {
         name: "Hellfire metal",
+        key: "hellfire_metal",
         qty: 38,
       },
     ],
@@ -2630,6 +2917,7 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Orthenglass",
+        key: "orthenglass",
         qty: 79,
       },
     ],
@@ -2642,10 +2930,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Felt",
+        key: "felt",
         qty: 40,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 38,
       },
     ],
@@ -2658,10 +2948,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 40,
       },
       {
         name: "Compass rose",
+        key: "compass_rose",
         qty: 38,
       },
     ],
@@ -2674,14 +2966,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Quintessence",
+        key: "quintessence",
         qty: 34,
       },
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 20,
       },
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 26,
       },
     ],
@@ -2694,10 +2989,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Stormguard steel",
+        key: "stormguard_steel",
         qty: 44,
       },
       {
         name: "Orthenglass",
+        key: "orthenglass",
         qty: 36,
       },
     ],
@@ -2714,10 +3011,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Everlight silvthril",
+        key: "everlight_silvthril",
         qty: 34,
       },
       {
         name: "Keramos",
+        key: "keramos",
         qty: 46,
       },
     ],
@@ -2730,14 +3029,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "White marble",
+        key: "white_marble",
         qty: 30,
       },
       {
         name: "Star of Saradomin",
+        key: "star_of_saradomin",
         qty: 24,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 26,
       },
     ],
@@ -2754,10 +3056,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 52,
       },
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 30,
       },
     ],
@@ -2770,14 +3074,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 16,
       },
       {
         name: "Imperial steel",
+        key: "imperial_steel",
         qty: 36,
       },
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 30,
       },
     ],
@@ -2790,18 +3097,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Warforged bronze",
+        key: "warforged_bronze",
         qty: 16,
       },
       {
         name: "Vulcanised rubber",
+        key: "vulcanised_rubber",
         qty: 24,
       },
       {
         name: "Animal furs",
+        key: "animal_furs",
         qty: 20,
       },
       {
         name: "Fossilised bone",
+        key: "fossilised_bone",
         qty: 24,
       },
     ],
@@ -2814,10 +3125,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Yu'biusk clay",
+        key: "yubiusk_clay",
         qty: 40,
       },
       {
         name: "Vulcanised rubber",
+        key: "vulcanised_rubber",
         qty: 44,
       },
     ],
@@ -2830,14 +3143,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Yu'biusk clay",
+        key: "yubiusk_clay",
         qty: 30,
       },
       {
         name: "Malachite green",
+        key: "malachite_green",
         qty: 24,
       },
       {
         name: "Warforged bronze",
+        key: "warforged_bronze",
         qty: 30,
       },
     ],
@@ -2850,14 +3166,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Stormguard steel",
+        key: "stormguard_steel",
         qty: 36,
       },
       {
         name: "Wings of War",
+        key: "wings_of_war",
         qty: 28,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 20,
       },
     ],
@@ -2870,14 +3189,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Stormguard steel",
+        key: "stormguard_steel",
         qty: 36,
       },
       {
         name: "Wings of War",
+        key: "wings_of_war",
         qty: 28,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 20,
       },
     ],
@@ -2890,10 +3212,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Dragon metal",
+        key: "dragon_metal",
         qty: 46,
       },
       {
         name: "Compass rose",
+        key: "compass_rose",
         qty: 40,
       },
     ],
@@ -2906,14 +3230,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Dragon metal",
+        key: "dragon_metal",
         qty: 30,
       },
       {
         name: "Compass rose",
+        key: "compass_rose",
         qty: 28,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 28,
       },
     ],
@@ -2926,14 +3253,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Warforged bronze",
+        key: "warforged_bronze",
         qty: 32,
       },
       {
         name: "Mark of the Kyzaj",
+        key: "mark_of_the kyzaj",
         qty: 26,
       },
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 30,
       },
     ],
@@ -2946,18 +3276,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "White oak",
+        key: "white_oak",
         qty: 20,
       },
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 20,
       },
       {
         name: "Orthenglass",
+        key: "orthenglass",
         qty: 26,
       },
       {
         name: "Malachite green",
+        key: "malachite_green",
         qty: 22,
       },
     ],
@@ -2970,18 +3304,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Mark of the Kyzaj",
+        key: "mark_of_the kyzaj",
         qty: 20,
       },
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 26,
       },
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 22,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 20,
       },
     ],
@@ -2994,18 +3332,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Aetherium alloy",
+        key: "aetherium_alloy",
         qty: 34,
       },
       {
         name: "Quintessence",
+        key: "quintessence",
         qty: 24,
       },
       {
         name: "Orthenglass",
+        key: "orthenglass",
         qty: 16,
       },
       {
         name: "Soapstone",
+        key: "soapstone",
         qty: 16,
       },
     ],
@@ -3018,10 +3360,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Quintessence",
+        key: "quintessence",
         qty: 46,
       },
       {
         name: "Vellum",
+        key: "vellum",
         qty: 44,
       },
     ],
@@ -3038,14 +3382,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Hellfire metal",
+        key: "hellfire_metal",
         qty: 44,
       },
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 26,
       },
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 20,
       },
     ],
@@ -3058,10 +3405,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Hellfire metal",
+        key: "hellfire_metal",
         qty: 50,
       },
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 40,
       },
     ],
@@ -3074,14 +3423,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Hellfire metal",
+        key: "hellfire_metal",
         qty: 38,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 26,
       },
       {
         name: "Orthenglass",
+        key: "orthenglass",
         qty: 26,
       },
     ],
@@ -3094,10 +3446,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Orgone",
+        key: "orgone",
         qty: 56,
       },
       {
         name: "Soapstone",
+        key: "soapstone",
         qty: 34,
       },
     ],
@@ -3110,14 +3464,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Orgone",
+        key: "orgone",
         qty: 34,
       },
       {
         name: "Carbon black",
+        key: "carbon_black",
         qty: 28,
       },
       {
         name: "Compass rose",
+        key: "compass_rose",
         qty: 28,
       },
     ],
@@ -3130,10 +3487,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Orgone",
+        key: "orgone",
         qty: 56,
       },
       {
         name: "Compass rose",
+        key: "compass_rose",
         qty: 34,
       },
     ],
@@ -3146,10 +3505,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Warforged bronze",
+        key: "warforged_bronze",
         qty: 50,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 42,
       },
     ],
@@ -3162,10 +3523,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Warforged bronze",
+        key: "warforged_bronze",
         qty: 50,
       },
       {
         name: "Yu'biusk clay",
+        key: "yubiusk_clay",
         qty: 42,
       },
     ],
@@ -3178,10 +3541,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Everlight silvthril",
+        key: "everlight_silvthril",
         qty: 50,
       },
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 42,
       },
     ],
@@ -3194,10 +3559,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Everlight silvthril",
+        key: "everlight_silvthril",
         qty: 46,
       },
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 46,
       },
     ],
@@ -3210,14 +3577,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Vellum",
+        key: "vellum",
         qty: 40,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 20,
       },
       {
         name: "Blood of Orcus",
+        key: "blood_of_orcus",
         qty: 32,
       },
     ],
@@ -3235,10 +3605,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Imperial steel",
+        key: "imperial_steel",
         qty: 54,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 38,
       },
     ],
@@ -3251,10 +3623,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Dragon metal",
+        key: "dragon_metal",
         qty: 52,
       },
       {
         name: "Felt",
+        key: "felt",
         qty: 42,
       },
     ],
@@ -3267,10 +3641,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Felt",
+        key: "felt",
         qty: 42,
       },
       {
         name: "Orthenglass",
+        key: "orthenglass",
         qty: 52,
       },
     ],
@@ -3283,10 +3659,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Dragon metal",
+        key: "dragon_metal",
         qty: 52,
       },
       {
         name: "Orgone",
+        key: "orgone",
         qty: 42,
       },
     ],
@@ -3299,10 +3677,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Dragon metal",
+        key: "dragon_metal",
         qty: 34,
       },
       {
         name: "Orthenglass",
+        key: "orthenglass",
         qty: 60,
       },
     ],
@@ -3315,10 +3695,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Aetherium alloy",
+        key: "aetherium_alloy",
         qty: 50,
       },
       {
         name: "Quintessence",
+        key: "quintessence",
         qty: 46,
       },
     ],
@@ -3331,14 +3713,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Stormguard steel",
+        key: "stormguard_steel",
         qty: 30,
       },
       {
         name: "Wings of War",
+        key: "wings_of_war",
         qty: 36,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 30,
       },
     ],
@@ -3351,14 +3736,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Warforged bronze",
+        key: "warforged_bronze",
         qty: 44,
       },
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 34,
       },
       {
         name: "Eye of Dagon",
+        key: "eye_of_dagon",
         qty: 20,
       },
     ],
@@ -3375,14 +3763,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Warforged bronze",
+        key: "warforged_bronze",
         qty: 44,
       },
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 34,
       },
       {
         name: "Star of Saradomin",
+        key: "star_of_saradomin",
         qty: 20,
       },
     ],
@@ -3399,14 +3790,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Eye of Dagon",
+        key: "eye_of_dagon",
         qty: 24,
       },
       {
         name: "Chaotic brimstone",
+        key: "chaotic_brimstone",
         qty: 30,
       },
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 44,
       },
     ],
@@ -3419,14 +3813,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Hellfire metal",
+        key: "hellfire_metal",
         qty: 48,
       },
       {
         name: "Eye of Dagon",
+        key: "eye_of_dagon",
         qty: 30,
       },
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 20,
       },
     ],
@@ -3439,14 +3836,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Hellfire metal",
+        key: "hellfire_metal",
         qty: 44,
       },
       {
         name: "Chaotic brimstone",
+        key: "chaotic_brimstone",
         qty: 30,
       },
       {
         name: "Cadmium red",
+        key: "cadmium_red",
         qty: 24,
       },
     ],
@@ -3459,18 +3859,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Cobalt blue",
+        key: "cobalt_blue",
         qty: 52,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 16,
       },
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 16,
       },
       {
         name: "Vellum",
+        key: "vellum",
         qty: 16,
       },
     ],
@@ -3487,18 +3891,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Cobalt blue",
+        key: "cobalt_blue",
         qty: 52,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 16,
       },
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 16,
       },
       {
         name: "Vellum",
+        key: "vellum",
         qty: 16,
       },
     ],
@@ -3515,18 +3923,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Cobalt blue",
+        key: "cobalt_blue",
         qty: 52,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 16,
       },
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 16,
       },
       {
         name: "Vellum",
+        key: "vellum",
         qty: 16,
       },
     ],
@@ -3543,10 +3955,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Orgone",
+        key: "orgone",
         qty: 60,
       },
       {
         name: "Dragon metal",
+        key: "dragon_metal",
         qty: 40,
       },
     ],
@@ -3559,14 +3973,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Orgone",
+        key: "orgone",
         qty: 48,
       },
       {
         name: "Carbon black",
+        key: "carbon_black",
         qty: 26,
       },
       {
         name: "Compass rose",
+        key: "compass_rose",
         qty: 26,
       },
     ],
@@ -3579,10 +3996,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Orgone",
+        key: "orgone",
         qty: 60,
       },
       {
         name: "Dragon metal",
+        key: "dragon_metal",
         qty: 40,
       },
     ],
@@ -3595,10 +4014,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 40,
       },
       {
         name: "Blood of Orcus",
+        key: "blood_of_orcus",
         qty: 64,
       },
     ],
@@ -3611,14 +4032,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Imperial steel",
+        key: "imperial_steel",
         qty: 48,
       },
       {
         name: "Blood of Orcus",
+        key: "blood_of_orcus",
         qty: 36,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 20,
       },
     ],
@@ -3631,14 +4055,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Vellum",
+        key: "vellum",
         qty: 40,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 24,
       },
       {
         name: "Blood of Orcus",
+        key: "blood_of_orcus",
         qty: 40,
       },
     ],
@@ -3656,14 +4083,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Orgone",
+        key: "orgone",
         qty: 44,
       },
       {
         name: "Carbon black",
+        key: "carbon_black",
         qty: 30,
       },
       {
         name: "Compass rose",
+        key: "compass_rose",
         qty: 32,
       },
     ],
@@ -3676,14 +4106,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Orgone",
+        key: "orgone",
         qty: 30,
       },
       {
         name: "Carbon black",
+        key: "carbon_black",
         qty: 32,
       },
       {
         name: "Compass rose",
+        key: "compass_rose",
         qty: 44,
       },
     ],
@@ -3696,10 +4129,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Star of Saradomin",
+        key: "star_of_saradomin",
         qty: 50,
       },
       {
         name: "Vellum",
+        key: "vellum",
         qty: 60,
       },
     ],
@@ -3716,10 +4151,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "White marble",
+        key: "white_marble",
         qty: 60,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 50,
       },
     ],
@@ -3736,14 +4173,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Warforged bronze",
+        key: "warforged_bronze",
         qty: 44,
       },
       {
         name: "Malachite green",
+        key: "malachite_green",
         qty: 36,
       },
       {
         name: "Fossilised bone",
+        key: "fossilised_bone",
         qty: 32,
       },
     ],
@@ -3756,10 +4196,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Warforged bronze",
+        key: "warforged_bronze",
         qty: 66,
       },
       {
         name: "Fossilised bone",
+        key: "fossilised_bone",
         qty: 46,
       },
     ],
@@ -3772,14 +4214,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Chaotic brimstone",
+        key: "chaotic_brimstone",
         qty: 52,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 30,
       },
       {
         name: "Hellfire metal",
+        key: "hellfire_metal",
         qty: 30,
       },
     ],
@@ -3792,14 +4237,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Demonhide",
+        key: "demonhide",
         qty: 44,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 34,
       },
       {
         name: "Orthenglass",
+        key: "orthenglass",
         qty: 34,
       },
     ],
@@ -3812,10 +4260,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Armadylean yellow",
+        key: "armadylean_yellow",
         qty: 60,
       },
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 54,
       },
     ],
@@ -3828,14 +4278,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Armadylean yellow",
+        key: "armadylean_yellow",
         qty: 44,
       },
       {
         name: "Leather scraps",
+        key: "leather_scraps",
         qty: 40,
       },
       {
         name: "Orthenglass",
+        key: "orthenglass",
         qty: 30,
       },
     ],
@@ -3848,14 +4301,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Aetherium alloy",
+        key: "aetherium_alloy",
         qty: 50,
       },
       {
         name: "Quintessence",
+        key: "quintessence",
         qty: 34,
       },
       {
         name: "Wings of War",
+        key: "wings_of_war",
         qty: 34,
       },
     ],
@@ -3868,14 +4324,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Aetherium alloy",
+        key: "aetherium_alloy",
         qty: 50,
       },
       {
         name: "Quintessence",
+        key: "quintessence",
         qty: 34,
       },
       {
         name: "Wings of War",
+        key: "wings_of_war",
         qty: 34,
       },
     ],
@@ -3888,14 +4347,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Aetherium alloy",
+        key: "aetherium_alloy",
         qty: 50,
       },
       {
         name: "Wings of War",
+        key: "wings_of_war",
         qty: 34,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 34,
       },
     ],
@@ -3908,10 +4370,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 54,
       },
       {
         name: "Dragon metal",
+        key: "dragon_metal",
         qty: 66,
       },
     ],
@@ -3924,14 +4388,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 36,
       },
       {
         name: "Dragon metal",
+        key: "dragon_metal",
         qty: 50,
       },
       {
         name: "Orgone",
+        key: "orgone",
         qty: 34,
       },
     ],
@@ -3944,18 +4411,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 36,
       },
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 48,
       },
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 40,
       },
       {
         name: "Death rune",
+        key: "death_rune",
         qty: 30,
       },
     ],
@@ -3968,18 +4439,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 30,
       },
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 54,
       },
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 40,
       },
       {
         name: "Death rune",
+        key: "death_rune",
         qty: 50,
       },
     ],
@@ -3992,18 +4467,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Imperial steel",
+        key: "imperial_steel",
         qty: 36,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 58,
       },
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 30,
       },
       {
         name: "Death rune",
+        key: "death_rune",
         qty: 100,
       },
     ],
@@ -4016,10 +4495,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Yu'biusk clay",
+        key: "yubiusk_clay",
         qty: 66,
       },
       {
         name: "Animal furs",
+        key: "animal_furs",
         qty: 60,
       },
     ],
@@ -4036,14 +4517,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Vulcanised rubber",
+        key: "vulcanised_rubber",
         qty: 42,
       },
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 44,
       },
       {
         name: "Fossilised bone",
+        key: "fossilised_bone",
         qty: 40,
       },
     ],
@@ -4056,14 +4540,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Vulcanised rubber",
+        key: "vulcanised_rubber",
         qty: 44,
       },
       {
         name: "Fossilised bone",
+        key: "fossilised_bone",
         qty: 42,
       },
       {
         name: "Animal furs",
+        key: "animal_furs",
         qty: 40,
       },
     ],
@@ -4076,14 +4563,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Vulcanised rubber",
+        key: "vulcanised_rubber",
         qty: 500,
       },
       {
         name: "Malachite green",
+        key: "malachite_green",
         qty: 500,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 500,
       },
     ],
@@ -4096,14 +4586,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Hellfire metal",
+        key: "hellfire_metal",
         qty: 50,
       },
       {
         name: "Eye of Dagon",
+        key: "eye_of_dagon",
         qty: 40,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 40,
       },
     ],
@@ -4116,14 +4609,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Hellfire metal",
+        key: "hellfire_metal",
         qty: 40,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 50,
       },
       {
         name: "Eye of Dagon",
+        key: "eye_of_dagon",
         qty: 40,
       },
     ],
@@ -4136,14 +4632,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Hellfire metal",
+        key: "hellfire_metal",
         qty: 50,
       },
       {
         name: "Eye of Dagon",
+        key: "eye_of_dagon",
         qty: 40,
       },
       {
         name: "Third Age iron",
+        key: "third_age_iron",
         qty: 40,
       },
     ],
@@ -4156,10 +4655,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Everlight silvthril",
+        key: "everlight_silvthril",
         qty: 70,
       },
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 62,
       },
     ],
@@ -4172,10 +4673,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Everlight silvthril",
+        key: "everlight_silvthril",
         qty: 70,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 62,
       },
     ],
@@ -4188,18 +4691,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Aetherium alloy",
+        key: "aetherium_alloy",
         qty: 40,
       },
       {
         name: "Quintessence",
+        key: "quintessence",
         qty: 30,
       },
       {
         name: "Soapstone",
+        key: "soapstone",
         qty: 40,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 24,
       },
     ],
@@ -4212,14 +4719,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Quintessence",
+        key: "quintessence",
         qty: 54,
       },
       {
         name: "Stormguard steel",
+        key: "stormguard_steel",
         qty: 40,
       },
       {
         name: "White oak",
+        key: "white_oak",
         qty: 40,
       },
     ],
@@ -4232,14 +4742,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Aetherium alloy",
+        key: "aetherium_alloy",
         qty: 46,
       },
       {
         name: "Armadylean yellow",
+        key: "armadylean_yellow",
         qty: 40,
       },
       {
         name: "Orthenglass",
+        key: "orthenglass",
         qty: 48,
       },
     ],
@@ -4252,14 +4765,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "White oak",
+        key: "white_oak",
         qty: 20,
       },
       {
         name: "Tyrian purple",
+        key: "tyrian_purple",
         qty: 54,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 60,
       },
     ],
@@ -4272,14 +4788,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Vellum",
+        key: "vellum",
         qty: 40,
       },
       {
         name: "Tyrian purple",
+        key: "tyrian_purple",
         qty: 60,
       },
       {
         name: "Ancient vis",
+        key: "ancient_vis",
         qty: 34,
       },
     ],
@@ -4292,18 +4811,22 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "White oak",
+        key: "white_oak",
         qty: 20,
       },
       {
         name: "Samite silk",
+        key: "samite_silk",
         qty: 20,
       },
       {
         name: "Tyrian purple",
+        key: "tyrian_purple",
         qty: 74,
       },
       {
         name: "Zarosian insignia",
+        key: "zarosian_insignia",
         qty: 20,
       },
     ],
@@ -4320,14 +4843,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Yu'biusk clay",
+        key: "yubiusk_clay",
         qty: 60,
       },
       {
         name: "Malachite green",
+        key: "malachite_green",
         qty: 38,
       },
       {
         name: "Soapstone",
+        key: "soapstone",
         qty: 40,
       },
     ],
@@ -4340,14 +4866,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Yu'biusk clay",
+        key: "yubiusk_clay",
         qty: 50,
       },
       {
         name: "Malachite green",
+        key: "malachite_green",
         qty: 44,
       },
       {
         name: "Soapstone",
+        key: "soapstone",
         qty: 44,
       },
     ],
@@ -4365,14 +4894,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 52,
       },
       {
         name: "Orgone",
+        key: "orgone",
         qty: 44,
       },
       {
         name: "Felt",
+        key: "felt",
         qty: 42,
       },
     ],
@@ -4385,10 +4917,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Dragon metal",
+        key: "dragon_metal",
         qty: 74,
       },
       {
         name: "Orgone",
+        key: "orgone",
         qty: 64,
       },
     ],
@@ -4401,10 +4935,12 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 86,
       },
       {
         name: "Dragon metal",
+        key: "dragon_metal",
         qty: 54,
       },
     ],
@@ -4417,14 +4953,17 @@ export const artefactsList = Object.freeze([
     mats: [
       {
         name: "Orgone",
+        key: "orgone",
         qty: 56,
       },
       {
         name: "Dragon metal",
+        key: "dragon_metal",
         qty: 44,
       },
       {
         name: "Goldrune",
+        key: "goldrune",
         qty: 40,
       },
     ],
@@ -4606,7 +5145,7 @@ export function md5(s) {
 so if possible we use it. Some IEs
 are the only ones I know of that
 need the idiotic second function,
-generated by an if clause.  */
+generated by an if-clause.  */
 
 function add32(a, b) {
   return (a + b) & 0xFFFFFFFF;

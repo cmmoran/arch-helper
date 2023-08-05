@@ -8,29 +8,34 @@ import ChatBoxReader from "@alt1/chatbox"
 import {
   clearMessage,
   detectChatArch,
+  detectChatCommand,
   displayDetectionMessage,
   displayMaterials,
   displayMessage,
   hide,
   screenshot,
-  sortByLastSite,
   toggleCrosshairs,
   useLocalStorage
 } from "./helpers"
+import useSound from 'use-sound'
 import ArchHelperOptions, {materialStorageSort} from "./ArchHelperOptions";
 import MaterialsStorageReader, {MaterialStorageReadState, ReadState} from "./MaterialsStorageReader";
+import {ImageData} from "../../alt1/alt1/base/src";
+import {Material} from "./data";
 
 const SCAN_MATERIAL_STORAGE: string = 'Scan';
 const STOP_SCANNING: string = 'Stop';
 
-const createMaterialsReader = () => {
-  return new MaterialsStorageReader();
+ImageData.prototype.show.maxImages = 0;
+const createMaterialsReader = (mats?: Material[]) => {
+  return new MaterialsStorageReader(mats);
 };
 
 const createChatReader = () => {
   const reader = new ChatBoxReader()
 
   const additionalColors = [
+    mixColor(194, 199, 201), //White text
     mixColor(255, 255, 255), //White text
     mixColor(0, 255, 0), //Green Imp-souled Text
     mixColor(45, 186, 21),
@@ -41,6 +46,11 @@ const createChatReader = () => {
     mixColor(238, 118, 0), //Familiarization/Daily Challenge Orange
     mixColor(174, 0, 0), //As you're an ironman.... red
     mixColor(159, 255, 155), //clan chat?
+    mixColor(255, 215, 0), //forgot about your pickpocketing
+    mixColor(85, 153, 255), //"news post" link
+    mixColor(235, 47, 47), //"You already have full prayer and summoning points."
+    mixColor(200, 100, 0), //"the Master Fisherman"
+    mixColor(254, 207, 40), //"c: [06:28:15] Item could not be found in the quantity required: Dwar weed incense sticks"
   ];
   reader.readargs.colors.push(...additionalColors);
   return reader
@@ -50,9 +60,17 @@ const createChatReader = () => {
 //   return [...(mats !== null && mats.length > 0 ? mats : [])];
 // }
 
-const createArchHelperOptions = () => {
-  return new ArchHelperOptions();
+const createArchHelperOptions = (mats:Material[] = null) => {
+  return new ArchHelperOptions(mats === null || mats.length === 0 ? null : mats);
 }
+
+const Player = ({ url }) => {
+  const [playSound] = useSound(url,  {volume: 0.25});
+
+  return (
+    <button className={"nisbutton2"} type={'button'} onClick={() => playSound()}>{"Ding"}</button>
+  );
+};
 
 function App() {
   const readerRef = useRef(createChatReader());
@@ -74,15 +92,27 @@ function App() {
     }
   });
   const [options, setOptions] = useLocalStorage<ArchHelperOptions>('arch_helper', createArchHelperOptions());
-  const matsReaderRef = useRef(createMaterialsReader());
+  const matsReaderRef = useRef(createMaterialsReader(options.materialsData));
+  const [playSound] = useSound('ding.ogg',  {volume: 0.25});
 
   const {showHud, scanning, foundChat, crosshairs} = mainStates;
 
   const resetMats = () => {
-    const archHelperOptions = createArchHelperOptions();
-    setOptions(archHelperOptions);
+    const archHelperOptions = new ArchHelperOptions();
     matsReaderRef.current.materialsData = archHelperOptions.materialsData;
     displayMessage("Material Storage data reset", "arch_scan", 3000, 20, mixColor(255, 255, 0));
+    setOptions(archHelperOptions);
+    setMainStates((ms) => ({...ms, materials: archHelperOptions.materialsData, showHud: {trigger: true, visible: false}}));
+  };
+
+  const resetGoals = () => {
+    options.materialsData.forEach(m => {
+      m.goal = 0;
+    });
+    matsReaderRef.current.materialsData = options.materialsData;
+    displayMessage("Material Storage data reset", "arch_scan", 3000, 20, mixColor(255, 255, 0));
+    setOptions(options);
+    setMainStates((ms) => ({...ms, materials: options.materialsData, showHud: {trigger: true, visible: false}}));
   };
 
   useEffect(() => {
@@ -95,7 +125,6 @@ function App() {
   useEffect(() => {
     if (showHud.trigger) {
       if (showHud.visible) {
-        console.log("displayMaterials");
         displayMaterials(options.shapedData(), 'arch_hud', 5);
       } else {
         hide('arch_hud');
@@ -103,7 +132,6 @@ function App() {
       setMainStates((ms) => ({...ms, showHud: {...ms.showHud, trigger: false}}));
     }
   }, [showHud, options]);
-
 
   useEffect(() => {
     const tick = () => {
@@ -122,6 +150,7 @@ function App() {
                   displayMessage(readState.detail, "arch_scan", duration, 20, mixColor(0, 255, 0));
                   setMainStates((ms) => ({
                     ...ms,
+                    materials: readState.materials,
                     scanning: {trigger: matsReaderRef.current.running(), state: readState.state}
                   }));
                 }
@@ -131,10 +160,14 @@ function App() {
               }
             } else {
               clearMessage("arch_scan");
-              const new_options = new ArchHelperOptions(readState.materials, materialStorageSort, "NONE");
+              const new_options = new ArchHelperOptions(readState.materials, options.sortOptions, options.filterOptions, options.filterOptionsArgs);
               setOptions(new_options);
               displayMessage(readState.detail, "arch_scan", 5000, 20);
-              setMainStates((ms) => ({...ms, showHud:{trigger: true, visible:true}, scanning: {trigger: false, state: readState.state}}));
+              setMainStates((ms) => ({
+                ...ms,
+                showHud: {trigger: true, visible: true},
+                scanning: {trigger: false, state: readState.state}
+              }));
             }
           }
         }
@@ -146,7 +179,7 @@ function App() {
     const tickInterval = setInterval(tick, 500)
 
     return () => clearInterval(tickInterval)
-  }, [mainStates]);
+  }, [mainStates, options]);
 
   useEffect(() => {
     const tick = () => {
@@ -181,7 +214,8 @@ function App() {
           chatLines = readerRef.current.read() || []
         }
 
-        if (chatLines !== []) {
+        if (chatLines !== [] && chatLines.length > 0) {
+          console.log("RAW CHAT:", chatLines);
           let cl = chatLines.map(c => c.text).join(' ').split(/\s(?=\[\d+:\d+:\d+\])/g);
           cl.forEach((line) => {
             if (line.trim() === "") {
@@ -189,17 +223,24 @@ function App() {
             }
             console.log(`c: ${line}`);
 
-            let found = detectChatArch(line, options.materialsData);
+            let found = detectChatArch(readerRef.current, line, options.materialsData, playSound);
             if (found.changes) {
               console.log("Found:", found);
               const new_options = new ArchHelperOptions(options.materialsData, options.sortOptions, options.filterOptions, options.filterOptionsArgs);
               setOptions(new_options);
-              setMainStates((ms) => ({...ms, showHud: {trigger:true, visible: true}}));
+              setMainStates((ms) => ({...ms, showHud: {trigger: true, visible: ms.showHud.visible}}));
             } else if (found.command.type !== null) {
               const new_options = new ArchHelperOptions(options.materialsData, found.command.args.sort, found.command.args.filter, found.command.args.filterArgs);
               setOptions(new_options);
-              setMainStates((ms) => ({...ms, showHud: {trigger:true, visible: true}}));
+              setMainStates((ms) => ({...ms, showHud: {trigger: true, visible: true}}));
               console.log("Detected possible sort/filter: ", found.command);
+            }
+            let command = detectChatCommand(line, options.materialsData);
+            if(command.trigger) {
+              const new_options = new ArchHelperOptions(options.materialsData, command.command.args.sort, command.command.args.filter, command.command.args.filterArgs);
+              setOptions(new_options);
+              setMainStates((ms) => ({...ms, showHud: {trigger: true, visible: true}}));
+              console.log("Command: Detected possible sort/filter: ", command);
             }
           });
         }
@@ -208,12 +249,44 @@ function App() {
         displayDetectionMessage("An error has occured: " + error, 1500)
       }
     }
+    const tickInterval = setInterval(tick, 500);
 
-    const tickInterval = setInterval(tick, 1000)
-
-    return () => clearInterval(tickInterval)
-  }, [mainStates, options])
-
+    return () => clearInterval(tickInterval);
+  }, [mainStates, options]);
+/*
+  useEffect(() => {
+    let lastElement;
+    const tick = () => {
+      try {
+        const defaultcolors: ColortTriplet[] = [
+          [255, 255, 255],
+        ];
+        // +15 @ -884, -786
+        let ss = captureHoldFullRs();
+        // let buf = ss.toData(1740, 432, 50, 14);
+        // let buf = ss.toData(2251, 653, 50, 14);
+        let buf = ss.toData(2250, 442, 75, 14);
+        // let buf = ss.toData(2183, 653, 50, 14);
+        buf.show(0, 0, 5);
+        //-889,-780
+        // const line = OCR.findReadLine(buf, font, defaultcolors, 3, 7);
+        // console.log("XP Gained:", line);
+        let line = OCR.readLine(buf, font, defaultcolors, 1, 9, true, false);
+        if (line !== null && line.text !== '') {
+          // if(lastElement !== line.text) {
+          console.log(`XP Gained:`, line);
+          lastElement = line.text;
+          displayMessage(`XP: ${line.text}`, "xp", 1000, 48, mixColor(0, 255, 255), -48);
+          // }
+        }
+      } catch (e) {
+        console.log(e);
+        displayMessage("Error: " + e, "error", 3000, 20, mixColor(255, 32, 32));
+      }
+    };
+    const tickInterval = setInterval(tick, 500);
+    return () => clearInterval(tickInterval);
+  }, [])*/
   return (
     <div
       style={{
@@ -246,7 +319,7 @@ function App() {
                   clearMessage("arch_scan");
                   displayMessage("Scanning started", "arch_scan", 1000, 20, mixColor(67, 188, 188));
                 }
-              }} className="nisbutton" type="button">
+              }} className="nisbutton2" type="button">
                 {scanning.trigger ? STOP_SCANNING : SCAN_MATERIAL_STORAGE}
               </button>
               <button className="nisbutton2" onClick={() => {
@@ -254,49 +327,28 @@ function App() {
               }} type="button">
                 Clear
               </button>
+              <button className="nisbutton2" onClick={() => {
+                resetGoals();
+              }} type="button">
+                Clear Goals
+              </button>
               <button className={"nisbutton2"} onClick={() => screenshot()} type="button">
                 Screenshot
               </button>
-              <button className={"nisbutton2"} onClick={() => setMainStates((ms) => ({...ms, crosshairs: {trigger: true, visible: !crosshairs.visible}}))} type="button">
-                Toggle Crosshairs
-              </button>
-              <button className={"nisbutton2"} onClick={() => setMainStates((ms) => ({...ms, showHud: {trigger: true, visible: !showHud.visible}}))} type="button">
+              <button className={"nisbutton2"} onClick={() => setMainStates((ms) => ({
+                ...ms,
+                showHud: {trigger: true, visible: !showHud.visible}
+              }))} type="button">
                 Toggle HUD
               </button>
-              <button className={"nisbutton2"} data-toggle={"collapse"} data-target={"#filtersort"} role={"button"}>
-                Filters/Sorts
+              <button className="nisbutton2" onClick={() => {
+                const new_options = new ArchHelperOptions(options.materialsData, materialStorageSort, "NONE");
+                setOptions(new_options)
+                setMainStates((ms) => ({...ms, showHud: {trigger: true, visible: false}}));
+              }}>
+                No Filter
               </button>
-              <div className={'collapse list-group'} id={"filtersort"}>
-                <button className="nisbutton" onClick={() => {
-                  const new_options = new ArchHelperOptions(options.materialsData, materialStorageSort, "NONE");
-                  setOptions(new_options)
-                  setMainStates((ms) => ({...ms, showHud: {trigger: true, visible: false}}));
-                }}>
-                  No Filter
-                </button>
-                <button className="nisbutton" onClick={() => {
-                  let found = {command: sortByLastSite()}
-                  const new_options = new ArchHelperOptions(options.materialsData, found.command.args.sort, found.command.args.filter, found.command.args.filterArgs);
-                  setOptions(new_options);
-                  setMainStates((ms) => ({...ms, showHud: {trigger: true, visible: false}}));
-                }}>
-                  Last Site
-                </button>
-                <button className="nisbutton" onClick={() => {
-                  const new_options = new ArchHelperOptions(options.materialsData, materialStorageSort, "RECENT_10_MIN");
-                  setOptions(new_options)
-                  setMainStates((ms) => ({...ms, showHud: {trigger: true, visible: false}}));
-                }}>
-                  Recent (10 mins)
-                </button>
-                <button className="nisbutton" onClick={() => {
-                  const new_options = new ArchHelperOptions(options.materialsData, materialStorageSort, "RECENT_3");
-                  setOptions(new_options)
-                  setMainStates((ms) => ({...ms, showHud: {trigger: true, visible: false}}));
-                }}>
-                  Recent 3
-                </button>
-              </div>
+              {/*<Player url={'ding.ogg'}></Player>*/}
             </div>
           </div>
         </div>
@@ -325,3 +377,4 @@ if (window.alt1) {
   //also updates app settings if they are changed
   alt1.identifyAppUrl("./appconfig.json");
 }
+

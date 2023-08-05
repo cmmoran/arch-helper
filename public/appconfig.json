@@ -1,9 +1,9 @@
 {
 	"appName": "Archaeology Helper",
-	"description": "minimal alt1 webpack/ts example test app",
+	"description": "archaeology material scanner, tracker, and ui helper overlay",
 	"appUrl": "./index.html",
 	"configUrl": "./appconfig.json",
-	"iconUrl": "",
+	"iconUrl": "./icon.png",
 	"defaultWidth": 210,
 	"defaultHeight": 250,
 	"minWidth": 210,

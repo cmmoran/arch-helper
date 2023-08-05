@@ -3,9 +3,9 @@ import {ColortTriplet} from "@alt1/ocr";
 import * as a1lib from "@alt1/base";
 import {ImageData, ImgRef} from "@alt1/base";
 import font from "@alt1/ocr/fonts/pixel_digits_8px_shadow";
-import {abuseLocalStorage, sortMats} from "./helpers";
+import {sortMats} from "./helpers";
 import {Material, materials} from "./data";
-import {ModalUI, ModalUIReader} from "./detect/modaluireader";
+import {ModalUIReader} from "./detect/modaluireader";
 
 const defaultcolors: ColortTriplet[] = [
   [80, 90, 16], // 0
@@ -123,9 +123,9 @@ const imgs = a1lib.ImageDetect.webpackImages({
 const cleanName = (name) => {
   return name?.replace("'", "")?.replace(/\s+/g, "_")?.toLowerCase();
 }
-*/
 
-const [backup, setBackup] = abuseLocalStorage('arch_helper_options_backup', materials)
+const [backup, setBackup] = abuseLocalStorage('arch_helper_options_backup', defaultMaterials)
+*/
 
 export enum MaterialStorageReadState {
   STARTED,
@@ -153,13 +153,14 @@ export type ReadState = {
 }
 
 export default class MaterialsStorageReader {
-  private _materialsData: Material[] = materials;
+  private _materialsData: Material[];
   private _currentReadState: MaterialStorageReadState = MaterialStorageReadState.IDLE;
   private stageOneComplete: boolean = false;
   private stageTwoComplete: boolean = false;
 
-  constructor(mats: Material[] = materials,
+  constructor(mats: Material[] = null,
   ) {
+    mats = mats === null ? JSON.parse(JSON.stringify(materials)) : mats;
     this._materialsData = sortMats(mats, ['faction', 'level']);
 
   }
@@ -171,7 +172,7 @@ export default class MaterialsStorageReader {
   }
 
   set materialsData(value: Material[]) {
-    this._materialsData = sortMats(value, ['faction', 'level']);
+    this._materialsData = value;
   }
 
   get materialsData(): Material[] {
@@ -184,11 +185,6 @@ export default class MaterialsStorageReader {
 
   set currentReadState(value: MaterialStorageReadState) {
     this._currentReadState = value;
-  }
-
-  restoreBackup(): Material[] {
-    this._materialsData = backup;
-    return this._materialsData;
   }
 
   reset(): void {
@@ -229,7 +225,6 @@ export default class MaterialsStorageReader {
     // noinspection FallThroughInSwitchStatementJS
     switch (this._currentReadState) {
       case MaterialStorageReadState.FINISHED:
-        setBackup(this.materialsData);
       case MaterialStorageReadState.IDLE:
         this._currentReadState = MaterialStorageReadState.IDLE;
         detail = "Material Storage quantities captured.";

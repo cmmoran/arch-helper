@@ -1,5 +1,33 @@
-import {Material, materials} from "./data";
+import {defaultMaterials, Material, materials} from "./data";
 
+export type FilterOptionArgsType = {
+  [k:string]:string[]
+}
+
+export type CommandArgsType = {
+  sort: {
+    keys: string[],
+    desc: boolean
+  },
+  filter: FilterOptions,
+  filterArgs: FilterOptionArgsType,
+}
+export type CommandTypes = "Chat" | "Sort" | ""
+export type CommandType = {
+  type: CommandTypes,
+  args: CommandArgsType,
+}
+export type FoundTypes = "" | "Normal" | "Auto-screener" | "Incense" | "Familiar" | "Fortune" | "Imp-souled" | "Porter";
+export type FoundType = {
+  type: FoundTypes
+  trigger: boolean,
+  rawcommand: string,
+  command: CommandType,
+  player: string,
+  color: number,
+  mats: Material[],
+  hash: string,
+}
 export type SortOptions = {
   keys: string[],
   desc: boolean;
@@ -57,15 +85,15 @@ export default class ArchHelperOptions {
   private readonly _materialsData: Material[];
   private readonly _sortOptions: SortOptions;
   private readonly _filterOptions: FilterOptions;
-  private readonly _filterOptionsArgs: any[];
+  private readonly _filterOptionsArgs: FilterOptionArgsType;
 
   constructor(
-    materialsData: Material[] = materials,
+    materialsData: Material[] = null,
     sortOptions: SortOptions = materialStorageSort,
     filterOptions: FilterOptions = "NONE",
-    filterOptionsArgs?: any[],
+    filterOptionsArgs?: FilterOptionArgsType,
   ) {
-    this._materialsData = [...materialsData];
+    this._materialsData = materialsData === null ? JSON.parse(JSON.stringify(materials)) : materialsData;
     this._sortOptions = sortOptions;
     this._filterOptions = filterOptions;
     this._filterOptionsArgs = filterOptionsArgs;
@@ -83,7 +111,7 @@ export default class ArchHelperOptions {
     return this._filterOptions;
   }
 
-  get filterOptionsArgs(): any[] {
+  get filterOptionsArgs(): FilterOptionArgsType {
     return this._filterOptionsArgs;
   }
 
@@ -122,4 +150,4 @@ export default class ArchHelperOptions {
   }
 }
 
-const emptyArchHelperOptions = new ArchHelperOptions();
+const emptyArchHelperOptions = new ArchHelperOptions([...defaultMaterials]);
